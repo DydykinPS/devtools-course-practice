@@ -29,8 +29,8 @@ int RadixSort::RightOfThePoint(double number) {
     strs << number;
     std::string str = strs.str();
     int size = str.size();
-    if (str.find('.')) {
-        int pos = str.find('.');
+    if (str.compare('.')) {
+        int pos = str.compare('.');
         int value = size - pos - 1;
         return value;
     } else {
@@ -63,9 +63,9 @@ std::vector<double> RadixSort::SortByOneRadix
 
 std::vector<double> RadixSort::Radix_Sort(const std::vector<double>& vect) {
     int size = vect.size();
-    int radixNegativeZero = 0;
     int maxRadixNegativeZero = RightOfThePoint(vect[0]);
     for (int i = 1; i < size; ++i) {
+        int radixNegativeZero = 0;
         radixNegativeZero = RightOfThePoint(vect[i]);
         if (radixNegativeZero > maxRadixNegativeZero) {
             maxRadixNegativeZero = radixNegativeZero;
