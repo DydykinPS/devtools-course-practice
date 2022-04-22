@@ -29,8 +29,8 @@ int RadixSort::RightOfThePoint(double number) {
     strs << number;
     std::string str = strs.str();
     int size = str.size();
-    if (str.compare('.')) {
-        int pos = str.compare('.');
+    if (str.find('.')) {
+        int pos = str.find('.');
         int value = size - pos - 1;
         return value;
     } else {
