@@ -1,5 +1,8 @@
 // Copyright 2022 Dydykin Pavel
 
+#include <vector>
+#include <string>
+
 #include "include/radix_sort.h"
 
 std::vector<double> RadixSort::Get_Random_Vector(int size) {
