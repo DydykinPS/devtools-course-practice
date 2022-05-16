@@ -83,7 +83,7 @@ std::string StohasticVariableApp::help() {
     std::string help = std::string("")
         + "Welcome to stohatic variable app!\n"
         + "Please provide mathematical expression to be calculated\n"
-        + "The first number is type of operation \n"
+        + "The first number is type of operation: \n"
         + "1 - Raw Moment; 2 - Mean; 3 - Central Moment; 4 - Dispersion \n"
         + "Then two vectors of distribution density";
     return help;
