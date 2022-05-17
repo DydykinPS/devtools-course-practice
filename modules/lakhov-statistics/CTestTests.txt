@@ -50,3 +50,11 @@ set_tests_properties (${prefix}_mean PROPERTIES
 set_tests_properties (${prefix}_central_moment PROPERTIES
     PASS_REGULAR_EXPRESSION "-0.350250"
     LABELS "${MODULE}")
+	
+	add_test(
+    NAME ${prefix}_incorrect_value
+    COMMAND ${APPLICATION} 2 1,2,3,4 0.2,-0.2,0.55,0.05
+)
+set_tests_properties (${prefix}_incorrect_value PROPERTIES
+    PASS_REGULAR_EXPRESSION "Calculational error occured!"
+    LABELS "${MODULE}")
