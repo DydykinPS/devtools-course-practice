@@ -70,6 +70,8 @@ std::string StohasticVariableApp::operator() (int argc, const char** argv) {
             return std::to_string(sc.CentralMoment(3));
         } else if (arg1 == "4") {
             return std::to_string(sc.Dispersion());
+        } else {
+            return "Incorrect number of operation";
         }
     }
     catch (std::invalid_argument& e) {
